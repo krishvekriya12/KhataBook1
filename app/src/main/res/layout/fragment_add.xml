@@ -25,6 +25,7 @@
         app:cardCornerRadius="30dp">
 
         <EditText
+            android:id="@+id/income"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
@@ -53,6 +54,7 @@
                 android:src="@drawable/category" />
 
             <EditText
+                android:id="@+id/category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -83,6 +85,7 @@
                 android:src="@drawable/notes" />
 
             <EditText
+                android:id="@+id/notes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -113,6 +116,7 @@
                 android:src="@drawable/add" />
 
             <EditText
+                android:id="@+id/extra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -124,10 +128,40 @@
 
     </androidx.cardview.widget.CardView>
 
+    <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+        android:id="@+id/group_choices"
+        android:layout_width="335dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape">
+
+        <com.nex3z.togglebuttongroup.button.LabelToggle
+            android:id="@+id/choice_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:padding="10dp"
+            android:text="Income"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <com.nex3z.togglebuttongroup.button.LabelToggle
+            android:id="@+id/choice_expenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:padding="10dp"
+            android:text="Expenses"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
     <TextView
+        android:id="@+id/save"
         android:layout_width="332dp"
         android:layout_height="50dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/shape"
         android:gravity="center"
         android:text="SAVE"

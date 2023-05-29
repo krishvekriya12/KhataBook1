@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.khatabook.Fragments.AddFragment
+import com.example.khatabook.Fragments.HomeFragment
 import com.example.khatabook.Fragments.TransactionFragment
 import com.example.khatabook.databinding.ActivityMainBinding
 import me.ibrahimsn.lib.OnItemSelectedListener
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        loadFragment(HomeFragment())
         binding.bottomBar.onItemSelectedListener = object : OnItemSelectedListener{
 
             override fun onItemSelect(pos: Int): Boolean {
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 when(pos) {
                     0->{
 
+                        loadFragment(HomeFragment())
                     }
                     1->{
                         loadFragment(AddFragment())
