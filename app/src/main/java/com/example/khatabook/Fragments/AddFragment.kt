@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.khatabook.Database
 import com.example.khatabook.Model.TransModal
-import com.example.khatabook.R
 import com.example.khatabook.databinding.FragmentAddBinding
 
 
@@ -21,7 +20,7 @@ class AddFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         dbHelper = Database(context)
 
         binding = FragmentAddBinding.inflate(layoutInflater)
@@ -45,7 +44,6 @@ class AddFragment : Fragment() {
             binding.category.setText("")
             binding.notes.setText("")
             binding.extra.setText("")
-
 
         }
         return binding.root
