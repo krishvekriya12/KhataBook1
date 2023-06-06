@@ -24,7 +24,7 @@ class TranslistAdapter : RecyclerView.Adapter<TranslistAdapter.TransListHolder>(
 
     override fun getItemCount(): Int {
 
-        return 5
+        return transList.size
 
     }
 
