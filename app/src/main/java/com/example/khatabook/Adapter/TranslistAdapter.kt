@@ -14,8 +14,6 @@ class TranslistAdapter : RecyclerView.Adapter<TranslistAdapter.TransListHolder>(
     class TransListHolder(itemView: TransItemBinding) : ViewHolder(itemView.root) {
 
         var binding = itemView
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransListHolder {
@@ -25,6 +23,7 @@ class TranslistAdapter : RecyclerView.Adapter<TranslistAdapter.TransListHolder>(
     }
 
     override fun getItemCount(): Int {
+
         return 5
 
     }

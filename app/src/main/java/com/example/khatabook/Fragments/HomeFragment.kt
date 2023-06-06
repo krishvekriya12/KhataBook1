@@ -32,11 +32,12 @@ class HomeFragment : Fragment() {
         transList = database.getTransaction()
 
         adapter = TranslistAdapter()
-        adapter.setTrans(transList)
+        if (transList.size>0) {
+            adapter.setTrans(transList)
 
-        binding.rcvTransList.layoutManager = LinearLayoutManager(context)
-        binding.rcvTransList.adapter = adapter
-
+            binding.rcvTransList.layoutManager = LinearLayoutManager(context)
+            binding.rcvTransList.adapter = adapter
+        }
         return binding.root
     }
 

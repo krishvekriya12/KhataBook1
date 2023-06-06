@@ -37,7 +37,7 @@ class AddFragment : Fragment() {
             var notes = binding.notes.text.toString()
             var extra = binding.extra.text.toString()
 
-            var model = TransModal(1,amt,category,notes,extra, isExpenses)
+            var model = TransModal(1,amt,category,notes,extra,isExpenses)
             dbHelper.addTrans(model)
 
             binding.income.setText("")
