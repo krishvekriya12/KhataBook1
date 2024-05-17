@@ -6,10 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.example.khatabook.Model.TransModal
 
-class Database(
-    context: Context?
-
-) : SQLiteOpenHelper(context,"Dharm.db",null,5){
+class Database(context: Context?) : SQLiteOpenHelper(context,"Dharm.db",null,5){
     var TABLE_NAME = "trans"
     var ID = "id"
     var AMT = "amt"
